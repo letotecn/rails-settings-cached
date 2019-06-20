@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.homepage      = "https://github.com/huacnlee/rails-settings-cached"
   s.require_paths = ["lib"]
 
-  s.required_ruby_version = ">= 2.5"
+  s.required_ruby_version = ">= 2.3"
   s.summary = "Settings plugin for Rails that makes managing a table of global keys."
   s.description = """
   This is improved from rails-settings, added caching.
@@ -27,7 +27,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", ">= 4.2.0"
   s.add_dependency "request_store"
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "sqlite3", '1.3.13'
   s.add_development_dependency "rubocop"
   s.add_development_dependency "simplecov"
   s.add_development_dependency "minitest"
