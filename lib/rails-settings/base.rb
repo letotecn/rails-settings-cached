@@ -9,6 +9,11 @@ module RailsSettings
     SEPARATOR_REGEXP = /[\s,]/
     self.table_name = table_name_prefix + "settings"
 
+    @@field_list = []
+
+    def self.field_list
+      @@field_list
+    end
     # get the value field, YAML decoded
     def value
       YAML.load(self[:value]) if self[:value].present?
@@ -83,6 +88,8 @@ module RailsSettings
               self.send(key)
             end
           end
+          @@field_list << key
+          @@field_list.uniq!
         end
 
         def _covert_string_to_typeof_value(type, value)

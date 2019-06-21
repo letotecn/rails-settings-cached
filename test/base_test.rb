@@ -166,4 +166,9 @@ class BaseTest < ActiveSupport::TestCase
     direct_update_record(:captcha_enable, "1")
     assert_equal true, Setting.captcha_enable
   end
+
+  test 'fields list' do
+    assert_equal 7, Setting.field_list.size
+    assert_equal %i[host readonly_item user_limits admin_emails captcha_enable smtp_settings omniauth_google_options].sort, Setting.field_list.sort
+  end
 end
