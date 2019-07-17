@@ -3,7 +3,6 @@ PATH
   specs:
     rails-settings-cached (2.0.3)
       rails (>= 4.2.0)
-      request_store
 
 GEM
   remote: https://rubygems.org/
@@ -102,8 +101,6 @@ GEM
       thor (>= 0.18.1, < 2.0)
     rainbow (3.0.0)
     rake (12.3.2)
-    request_store (1.4.1)
-      rack (>= 1.4)
     rubocop (0.67.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
